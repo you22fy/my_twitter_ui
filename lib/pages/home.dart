@@ -14,20 +14,30 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         leading: const CircleAvatar(
-          radius: 50,
-          backgroundColor: Colors.white,
+          radius: 30,
+          backgroundColor: Colors.blue,
           backgroundImage: AssetImage('images/my_icon_image.png'),
         ),
-        title: FaIcon(FontAwesomeIcons.twitter),
+        // ignore: prefer_const_constructors
+        title: FaIcon(
+					FontAwesomeIcons.twitter,
+					color: Colors.blue
+				),
         actions: <Widget>[
           IconButton(
 						onPressed:() => print("The button has pressed"),
-						icon: Icon(Icons.auto_awesome))
+      // ignore: prefer_const_constructors
+						icon: Icon(
+							Icons.auto_awesome,
+							color: Colors.black
+							))
         ],
+				backgroundColor: Colors.white,
       ),
       body: Center(
         child: Image.asset('images/my_icon_image.png'),
       ),
+
     );
   }
 }
